@@ -28,7 +28,7 @@ export class Cart {
 
   ionViewWillEnter() {
 
-      this.cartData.getCart().on('value', snapshot => {
+      this.cartData.getCart().limitToLast(3).on('value', snapshot => {
           let rawList = [];
           snapshot.forEach(snap => {
 
