@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+  <ion-row  >
+    <ion-col col-3 *ngFor="let item of goodList" responsive-sm wrap>
+       <button (click)="goodDetail(item)">
+         {{item.key}}
+         {{item.name}}
+           <img  height="42" width="42" src="{{item.img}}" />
+           </button>
+    </ion-col>
+  </ion-row>
+  
+</ion-grid>
+   <button ion-button block (click)="logOut()">
+      Log out
+    </button>
+</ion-content>
